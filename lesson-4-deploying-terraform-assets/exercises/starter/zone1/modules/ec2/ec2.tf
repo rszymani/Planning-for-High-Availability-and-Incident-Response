@@ -11,6 +11,7 @@ resource "aws_instance" "ubuntu" {
 }
 
 resource "aws_security_group" "ec2_sg" {
+ vpc_id      = var.vpc_id
  name = "ec2_sg"
  ingress {
   from_port = "80"
