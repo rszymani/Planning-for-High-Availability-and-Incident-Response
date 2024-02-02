@@ -3,5 +3,5 @@ output "aws_instance" {
 }
 
 output "ec2_sg" {
- value = ec2_sg.ec2_sg
+ value = aws_security_group.ec2_sg
 }

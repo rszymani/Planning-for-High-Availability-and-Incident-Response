@@ -13,7 +13,6 @@ resource "aws_instance" "ubuntu" {
 resource "aws_security_group" "ec2_sg" {
  id = "ec2_sg_id"
  name = "ec2_sg"
- instance_type = var.instance_type
  ingress {
   from_port = "80"
   to_port = "80"
