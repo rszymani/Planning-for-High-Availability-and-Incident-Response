@@ -21,6 +21,7 @@ resource "aws_db_subnet_group" "udacity_db_subnet_group" {
 
 }
 resource "aws_rds_cluster" "udacity_cluster" {
+  engine                   = "aurora-mysql"
   cluster_identifier       = "udacity-db-cluster"
   availability_zones       = ["us-east-2a", "us-east-2b", "us-east-2c"]
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.cluster_pg.name
@@ -29,7 +30,6 @@ resource "aws_rds_cluster" "udacity_cluster" {
   master_password          = "MyUdacityPassword"
   vpc_security_group_ids   = [aws_security_group.db_sg_1.id]
   db_subnet_group_name     = aws_db_subnet_group.udacity_db_subnet_group.name
-  engine                   = "aurora-mysql"
   engine_mode              = "provisioned"
   engine_version           = "5.6.mysql_aurora.1.19.1" 
   skip_final_snapshot      = true
