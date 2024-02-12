@@ -1368,8 +1368,8 @@ prometheusOperator:
     patch:
       enabled: true
       image:
-        repository: jettech/kube-webhook-certgen
-        tag: v1.5.2
+        repository: ingress-nginx/ingress-nginx
+        tag: 3.36.0
         sha: ""
         pullPolicy: IfNotPresent
       resources: {}
