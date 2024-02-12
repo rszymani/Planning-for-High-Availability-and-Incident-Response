@@ -1368,8 +1368,8 @@ prometheusOperator:
     patch:
       enabled: true
       image:
-        repository: ingress-nginx/ingress-nginx
-        tag: 3.36.0
+        repository: k8s.gcr.io/ingress-nginx/kube-webhook-certgen
+        tag: v1.3.0
         sha: ""
         pullPolicy: IfNotPresent
       resources: {}
