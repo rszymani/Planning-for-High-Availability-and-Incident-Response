@@ -1960,7 +1960,7 @@ prometheus:
     ## Image of Prometheus.
     ##
     image:
-      repository: quay.io/prometheus/prometheus
+      repository: prometheus/prometheus
       tag: v2.28.1
       sha: ""
 
